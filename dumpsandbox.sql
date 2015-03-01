@@ -27,7 +27,7 @@ CREATE TABLE `Bezirk` (
   `name` varchar(100) NOT NULL,
   `kantonId` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `Bezirk` (
 
 LOCK TABLES `Bezirk` WRITE;
 /*!40000 ALTER TABLE `Bezirk` DISABLE KEYS */;
-INSERT INTO `Bezirk` VALUES (1,'uster',1),(2,'buelach',1),(3,'lugano',3),(4,'bellinzona',3),(5,'locarno',3);
+INSERT INTO `Bezirk` VALUES (1,'uster',1),(2,'buelach',1),(3,'lugano',3),(4,'bellinzona',3),(5,'locarno',3),(7,'oberbayern',4),(8,'niederbayern',4);
 /*!40000 ALTER TABLE `Bezirk` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,7 +52,7 @@ CREATE TABLE `Kanton` (
   `name` varchar(100) NOT NULL,
   `landId` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,7 +61,7 @@ CREATE TABLE `Kanton` (
 
 LOCK TABLES `Kanton` WRITE;
 /*!40000 ALTER TABLE `Kanton` DISABLE KEYS */;
-INSERT INTO `Kanton` VALUES (1,'zuerich',1),(2,'bern',1),(3,'tessin',1);
+INSERT INTO `Kanton` VALUES (1,'zuerich',1),(2,'bern',1),(3,'tessin',1),(4,'bayern',2);
 /*!40000 ALTER TABLE `Kanton` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -102,7 +102,7 @@ CREATE TABLE `Ort` (
   `bezirkId` int(11) NOT NULL,
   `einwohner` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -111,7 +111,7 @@ CREATE TABLE `Ort` (
 
 LOCK TABLES `Ort` WRITE;
 /*!40000 ALTER TABLE `Ort` DISABLE KEYS */;
-INSERT INTO `Ort` VALUES (1,'volketswil',1,12000),(2,'stadel',2,2000),(3,'gubiasco',4,6000),(4,'barbengo',3,1000),(5,'paradiso',3,5000);
+INSERT INTO `Ort` VALUES (1,'volketswil',1,12000),(2,'stadel',2,2000),(3,'gubiasco',4,6000),(4,'barbengo',3,1000),(5,'paradiso',3,5000),(6,'muenchen',7,2000000),(7,'landshut',8,500000);
 /*!40000 ALTER TABLE `Ort` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -124,4 +124,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-03-01 16:15:43
+-- Dump completed on 2015-03-01 17:07:26
